@@ -1,0 +1,58 @@
+body{
+	font-family: century gothic;
+}
+main{
+	display: flex;
+	flex-direction: column;
+
+}
+h1{
+	text-align: center;
+}
+h3{
+	margin: 2%;
+	margin-left: 5%;
+}
+div.city{
+	margin: auto;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    min-height: 100px;
+	min-width: 570px;
+	max-width: 70%;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px gray;
+}
+div.days{
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+	min-width: 60%;
+	max-width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+div.day{
+	display: flex;
+	flex-direction: row;
+	max-width: 50px;
+	flex-wrap: wrap;
+}
+div.day > span{
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	color: #4CA028;
+}
+div.day > span.temp{
+	color: #F9AA00	;
+}
+span{
+	font-size: 0.7 em;
+}
+canvas{
+	margin-left: 8%;
+}
