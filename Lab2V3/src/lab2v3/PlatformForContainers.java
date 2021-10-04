@@ -3,10 +3,10 @@ package lab2v3;
 public class PlatformForContainers extends Wagon{
     
     public PlatformForContainers(){
-        super(new Container());
+        super(new Container(), "platformForContainer");
     }
     public PlatformForContainers(Container c){
-        super(c);
+        super(c, "platformForContainer");
     }
     
     public Product getContainer(){
@@ -16,6 +16,6 @@ public class PlatformForContainers extends Wagon{
         this.setProduct(c);
     }   
     public void setContainer(String name, double mass){
-        this.setProduct("platformForContainer", name, mass);
+        this.setProduct("container", name, mass);
     }
 }

@@ -3,10 +3,10 @@ package lab2v3;
 public class Tank extends Wagon{
    
     public Tank(){
-        super(new Liquid());
+        super(new Liquid(), "tank");
     }
     public Tank(Liquid l){
-        super(l);
+        super(l, "tank");
     }
     
     public Product getLiquid(){
@@ -16,6 +16,6 @@ public class Tank extends Wagon{
         this.setProduct(l);
     }   
     public void setLiquid(String name, double mass){
-        this.setProduct("tank", name, mass);
+        this.setProduct("liquid", name, mass);
     }
 }

@@ -1,5 +1,7 @@
 package lab2v3;
-
+/**
+ * Абстрактный класс, описывающий поведение продукции
+ */
 public abstract class Product {
     private String type;
     private String name;

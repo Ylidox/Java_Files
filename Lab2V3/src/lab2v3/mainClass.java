@@ -1,5 +1,8 @@
 package lab2v3;
-
+/**
+ * Основной класс, запускающий программу
+ * @author Aliev Artiom
+ */
 public class mainClass {
 
 
@@ -10,8 +13,7 @@ public class mainClass {
 
         manager.hello();
         manager.showTrain();
-        manager.showWarehouse();
-
+//        manager.showWarehouse();
     }
     
 }
