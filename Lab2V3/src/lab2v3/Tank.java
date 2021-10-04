@@ -1,24 +1,21 @@
 package lab2v3;
 
 public class Tank extends Wagon{
-    private Liquid liquid;
-    
+   
     public Tank(){
-        super("liquid");
-        liquid = new Liquid();
+        super(new Liquid());
     }
     public Tank(Liquid l){
-        super("liquid");
-        liquid = l;
+        super(l);
     }
     
-    public Liquid getLiquid(){
-        return liquid;
+    public Product getLiquid(){
+        return this.getProduct();
     }
     public void setLiquid(Liquid l){
-        liquid = new Liquid(l);
+        this.setProduct(l);
     }   
-    public void setLiquid(String type, double mass){
-        liquid = new Liquid(type, mass);
+    public void setLiquid(String name, double mass){
+        this.setProduct("tank", name, mass);
     }
 }

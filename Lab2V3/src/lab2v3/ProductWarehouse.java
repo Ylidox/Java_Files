@@ -1,33 +1,33 @@
 package lab2v3;
-import java.util.ArrayList;
 
 public class ProductWarehouse {
-    private ArrayList<Product> products;
+    private Product[] products;
     
     public ProductWarehouse(){
-        this.products = new ArrayList<>();
+        this.products = new Product[0];
     }
-    public ProductWarehouse(ArrayList<Product> c){
-        this.products = new ArrayList<>(c);
+    public ProductWarehouse(Product[] c){
+        this.products = c;
     }
     
     public void addProduct(Product p){
-        this.products.add(p);
+        
+        int len = this.products.length;
+        this.increaseSize();
+        this.products[len] = p;
     }
 
-    public ArrayList<Product> getProducts(){
+    public Product[] getProducts(){
         return products;
     }
-    
-    public void remove(String type){
-        int index = 0;
-        for(int i = 0; i < products.size(); i++){
-            Product p = products.get(i);
-            if(p.getType().equals(type)) index = i;
-        }
-        products.remove(index);
+    private void increaseSize(){
+        Product[] newArr = new Product[this.products.length + 1];
+        System.arraycopy(products, 0, newArr, 0, this.products.length);
+        products = newArr;
     }
-    public void remove(int index){
-        products.remove(index);
+    public void pop(){
+        Product[] newArr = new Product[this.products.length - 1];
+        System.arraycopy(products, 0, newArr, 0, this.products.length - 1);
+        products = newArr;
     }
 }

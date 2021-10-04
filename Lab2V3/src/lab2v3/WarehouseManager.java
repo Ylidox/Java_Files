@@ -3,9 +3,11 @@ package lab2v3;
 public class WarehouseManager {
     private Train train;
     private ProductWarehouse warehouse;
+    private TableManager tm;
     public WarehouseManager(){
         train = new Train();
         warehouse = new ProductWarehouse();
+        tm = new TableManager();
     }
     
     private void loadingProductToWarehouse(Product p){
@@ -23,5 +25,29 @@ public class WarehouseManager {
         loadingProductToWarehouse(new Container("QW-1207", 3000));
         loadingProductToWarehouse(new Car("Ford", 2300));
         loadingProductToWarehouse(new Car("Nissan", 1500));
+    }
+    
+    public void loadingWagon(Product p){
+        train.addWagon(p);
+    }
+    
+    public void loadingProductsFromWarehouseToTrain(){
+        Product[] products = warehouse.getProducts();
+        for(int i = products.length - 1; i >= 0; i--){
+            this.loadingWagon(products[i]);
+            warehouse.pop();
+        }
+    }
+    
+    public void showWarehouse(){
+        tm.showWarehouse(warehouse);
+    }
+    
+    public void showTrain(){
+        tm.showTrain(train);
+    }
+    
+    public void hello(){
+        tm.hello();
     }
 }

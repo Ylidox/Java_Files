@@ -1,22 +1,21 @@
 package lab2v3;
-import java.util.ArrayList;
 
 public class PlatformForCars extends Wagon{
-    private ArrayList<Car> cars;
     
     public PlatformForCars(){
-        super("cars");
-        this.cars = new ArrayList<>();
+        super(new Car());
     }
-    public PlatformForCars(ArrayList<Car> c){
-        super("containers");
-        this.cars = new ArrayList<>(c);
+    public PlatformForCars(Car c){
+        super(c);
     }
     
-    public ArrayList<Car> getCar(){
-        return cars;
+    public Product getCar(){
+        return this.getProduct();
     }
-    public void setCar(ArrayList<Car> c){
-        this.cars = new ArrayList<>(c);
-    }   
+    public void setCar(Car c){
+        this.setProduct(c);
+    }
+    public void setCar(String name, double mass){
+        this.setProduct("platformForCar", name, mass);
+    }
 }

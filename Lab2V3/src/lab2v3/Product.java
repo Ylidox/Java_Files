@@ -15,9 +15,9 @@ public abstract class Product {
         mass = l.mass;
         name = l.name;
     }
-    public Product(String name, double mass){
-        type = "product";
-        this.type = name;
+    public Product(String type, String name, double mass){
+        this.type = type;
+        this.name = name;
         this.mass = mass;
     }
     

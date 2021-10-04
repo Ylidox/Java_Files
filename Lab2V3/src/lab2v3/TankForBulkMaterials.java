@@ -4,21 +4,19 @@ public class TankForBulkMaterials extends Wagon{
     private BulkMaterials bulkMaterials;
     
     public TankForBulkMaterials(){
-        super("bulk materials");
-        bulkMaterials = new BulkMaterials();
+        super(new BulkMaterials());
     }
     public TankForBulkMaterials(BulkMaterials b){
-        super("liquid");
-        bulkMaterials = b;
+        super(b);
     }
     
-    public BulkMaterials getLiquid(){
-        return bulkMaterials;
+    public Product getBulkMaterials(){
+        return this.getProduct();
     }
     public void setBulkMaterials(BulkMaterials b){
-        bulkMaterials = new BulkMaterials(b);
+        this.setProduct(b);
     }   
-    public void setBulkMaterials(String type, double mass){
-        bulkMaterials = new BulkMaterials(type, mass);
+    public void setBulkMaterials(String name, double mass){
+        this.setProduct("tankForBulkMaterials", name, mass);
     }
 }
